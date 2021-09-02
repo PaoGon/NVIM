@@ -1,4 +1,5 @@
 "set leader key
+nnoremap <SPACE> <Nop>
 let g:mapleader = "\<Space>"
 
 syntax enable

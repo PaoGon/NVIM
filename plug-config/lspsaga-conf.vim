@@ -1,0 +1,48 @@
+" show hover doc
+nnoremap <silent><leader>K <cmd>lua require('lspsaga.hover').render_hover_doc()<CR>
+"
+" scroll down hover doc or scroll in definition preview
+nnoremap <silent><C-f> <cmd>lua require('lspsaga.action').smart_scroll_with_saga(1)<CR>
+" scroll up hover doc
+nnoremap <silent><c-b> <cmd>lua require('lspsaga.action').smart_scroll_with_saga(-1)<cr>
+
+
+" Code action
+nnoremap <silent><leader>ba :Lspsaga code_action<CR>
+vnoremap <silent><leader>ba :<C-U>Lspsaga range_code_action<CR>
+
+
+" lsp provider to find the cursor word definition and reference
+nnoremap <silent>gh <cmd>lua require'lspsaga.provider'.lsp_finder()<CR>
+" or use command LspSagaFinder
+nnoremap <silent>gh :Lspsaga lsp_finder<CR>
+
+
+" Rename
+nnoremap <silent>gr <cmd>lua require('lspsaga.rename').rename()<CR>
+" or command
+nnoremap <silent>gr :Lspsaga rename<CR>
+" close rename win use <C-c> in insert mode or `q` in noremal mode or `:q`
+
+
+" Show signature help
+nnoremap <silent><C-s> <cmd>lua require('lspsaga.signaturehelp').signature_help()<CR>
+" or command
+nnoremap <silent><C-s> :Lspsaga signature_help<CR>
+
+" Preview Definition
+nnoremap <silent>gd <cmd>lua require'lspsaga.provider'.preview_definition()<CR>
+" or use command
+nnoremap <silent>gd :Lspsaga preview_definition<CR>
+
+
+" Diagnostic and Show Diagnostics
+nnoremap <silent><leader>cd <cmd>lua
+nnoremap <silent> <leader>cd :Lspsaga show_line_diagnostics<CR>
+
+" only show diagnostic if cursor is over the area
+nnoremap <silent><leader>cc <cmd>lua
+
+" jump diagnostic
+nnoremap <silent><C-p> <cmd>lua require'lspsaga.diagnostic'.lsp_jump_diagnostic_prev()<CR>
+nnoremap <silent><C-n> <cmd>lua require'lspsaga.diagnostic'.lsp_jump_diagnostic_next()<CR>

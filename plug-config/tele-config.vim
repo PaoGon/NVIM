@@ -18,10 +18,10 @@ nnoremap <leader>of <cmd>Telescope oldfiles<cr>
 nnoremap <leader>fb <cmd>Telescope file_browser<cr>
 
 " LSP commands
-nnoremap <leader>gr <cmd>Telescope lsp_references<cr> 
-nnoremap <leader>gd <cmd>Telescope lsp_defenitions<cr> 
-nnoremap <leader>Ca <cmd>Telescope lsp_code_actions<cr>
-nnoremap <leader>ds <cmd>Telescope lsp_document_symbols<cr>
+"nnoremap <leader>gr <cmd>Telescope lsp_references<cr> 
+"nnoremap <leader>gd <cmd>Telescope lsp_defenitions<cr> 
+"nnoremap <leader>Ca <cmd>Telescope lsp_code_actions<cr>
+"nnoremap <leader>ds <cmd>Telescope lsp_document_symbols<cr>
 
 
 " Git Pickers
