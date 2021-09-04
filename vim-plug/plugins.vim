@@ -8,6 +8,7 @@ Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/nvim-compe'
 Plug 'glepnir/lspsaga.nvim'
 Plug 'ray-x/lsp_signature.nvim'
+Plug 'mfussenegger/nvim-jdtls'
 
 "telescope plugins
 Plug 'nvim-lua/plenary.nvim'
@@ -29,4 +30,3 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'preservim/nerdcommenter'
 
 call plug#end()
-

@@ -18,4 +18,5 @@ function! Toggle_transparent_background()
     let t:is_transparent = 0                                                                    
   endif                                                                                         
 endfunction                                                                                     
+
 nnoremap <C-x> :call Toggle_transparent_background()<CR>  
