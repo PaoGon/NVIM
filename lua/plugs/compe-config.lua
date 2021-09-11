@@ -23,7 +23,6 @@ require'compe'.setup {
     nvim_lua = true;
     spell = true;
     tags = true;
-    snippets_nvim = true;
     treesitter = true;
   };
 }
@@ -69,6 +68,7 @@ vim.api.nvim_set_keymap("i", "<Tab>", "v:lua.tab_complete()", {expr = true})
 vim.api.nvim_set_keymap("s", "<Tab>", "v:lua.tab_complete()", {expr = true})
 vim.api.nvim_set_keymap("i", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
 vim.api.nvim_set_keymap("s", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
+
 
 local saga = require 'lspsaga'
 saga.init_lsp_saga {

@@ -20,6 +20,8 @@ luafile $HOME/.config/nvim/lua/plugs/gitsigns.lua
 
 source $HOME/.config/nvim/plug-config/lspsaga-conf.vim
 
+unmap <Tab>
+
 augroup lsp
     au!
     au FileType java lua require'jdtls_config'.setup()

@@ -9,8 +9,8 @@ nnoremap <M-l>    :vertical resize +2<CR>
 :imap kj <Esc>
 
 " Easy CAPS
-inoremap <c-u> <ESC>viwUi
-nnoremap <c-u> viwU<Esc>
+inoremap <leader><c-u> <ESC>viwUi
+nnoremap <leader><c-u> viwU<Esc>
 
 "better tabing
 vnoremap < <gv
