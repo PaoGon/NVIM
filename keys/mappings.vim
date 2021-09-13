@@ -9,13 +9,11 @@ nnoremap <M-l>    :vertical resize +2<CR>
 :imap kj <Esc>
 
 " Easy CAPS
-inoremap <leader><c-u> <ESC>viwUi
 nnoremap <leader><c-u> viwU<Esc>
 
 "better tabing
 vnoremap < <gv
 vnoremap > >gv
-
 
 "better nav for omnicomplete
 inoremap <expr> <c-j> ("\<C-n>")

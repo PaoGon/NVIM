@@ -7,7 +7,9 @@ source $HOME/.config/nvim/plug-config/tele-config.vim
 source $HOME/.config/nvim/themes/themes.vim
 
 "lsp lua
-luafile $HOME/.config/nvim/lua/plugs/compe-config.lua
+"luafile $HOME/.config/nvim/lua/plugs/compe-config.lua
+luafile $HOME/.config/nvim/lua/plugs/cmp-config.lua
+luafile $HOME/.config/nvim/lua/plugs/saga-conf.lua
 luafile $HOME/.config/nvim/lua/lsp/python-ls.lua
 luafile $HOME/.config/nvim/lua/lsp/html-ls.lua
 luafile $HOME/.config/nvim/lua/lsp/css-ls.lua
@@ -20,7 +22,6 @@ luafile $HOME/.config/nvim/lua/plugs/gitsigns.lua
 
 source $HOME/.config/nvim/plug-config/lspsaga-conf.vim
 
-unmap <Tab>
 
 augroup lsp
     au!

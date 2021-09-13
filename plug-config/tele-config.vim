@@ -3,6 +3,9 @@ nnoremap <C-p> :Files<Cr>
 " lsit files in current directory
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
 
+
+nnoremap <leader>fs <cmd>Telescope grep_string<cr>
+
 " do a live grep
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 
