@@ -16,8 +16,12 @@ capabilities.textDocument.completion.completionItem.resolveSupport = {
   },
 }
 
-require'lspconfig'.cssls.setup{
-    capabilities = capabilities,
+require'lspconfig'.html.setup {
+  capabilities = capabilities,
+}
+
+require'lspconfig'.cssls.setup {
+  capabilities = capabilities,
 }
 
 

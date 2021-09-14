@@ -10,7 +10,6 @@ Plug 'ray-x/lsp_signature.nvim'
 Plug 'mfussenegger/nvim-jdtls'
 Plug 'onsails/lspkind-nvim'
 
-Plug 'L3MON4D3/LuaSnip' " Snippets plugin
 Plug 'hrsh7th/nvim-cmp' " Autocompletion plugin
 Plug 'hrsh7th/cmp-nvim-lsp' " LSP source for nvim-cmp
 Plug 'hrsh7th/cmp-buffer' "buffer completion source
@@ -19,6 +18,7 @@ Plug 'hrsh7th/cmp-nvim-lua'
 Plug 'hrsh7th/cmp-path' 
 Plug 'f3fora/cmp-spell'
 Plug 'hrsh7th/cmp-calc'
+Plug 'L3MON4D3/LuaSnip' " Snippets plugin
 
 "telescope plugins
 Plug 'nvim-lua/plenary.nvim'
