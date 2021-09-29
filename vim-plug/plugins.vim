@@ -36,6 +36,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  
 
 " for auto pairs and for easier commenting
+Plug 'mattn/emmet-vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'preservim/nerdcommenter'
 
