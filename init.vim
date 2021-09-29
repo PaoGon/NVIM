@@ -3,6 +3,8 @@ source $HOME/.config/nvim/general/settings.vim
 source $HOME/.config/nvim/keys/mappings.vim
 source $HOME/.config/nvim/plug-config/treesitter.vim
 source $HOME/.config/nvim/plug-config/lsp-config.vim
+
+luafile $HOME/.config/nvim/lua/plugs/tele-conf.lua
 source $HOME/.config/nvim/plug-config/tele-config.vim
 source $HOME/.config/nvim/themes/themes.vim
 

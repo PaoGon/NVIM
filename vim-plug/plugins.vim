@@ -24,6 +24,7 @@ Plug 'L3MON4D3/LuaSnip' " Snippets plugin
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'kyazdani42/nvim-web-devicons'
+Plug 'nvim-telescope/telescope-fzy-native.nvim'
 
 "GIT Functionality
 Plug 'lewis6991/gitsigns.nvim'

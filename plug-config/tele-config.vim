@@ -3,8 +3,11 @@ nnoremap <C-p> :Files<Cr>
 " lsit files in current directory
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
 
+nnoremap <leader>gf <cmd>Telescope git_files<cr>
 
-nnoremap <leader>fs <cmd>Telescope grep_string<cr>
+nnoremap <leader>fs :lua require('telescope.builtin').grep_string({ search = vim.fn.input("Grep For > ")})<CR>
+
+nnoremap <leader>pw :lua require('telescope.builtin').grep_string { search = vim.fn.expand("<cword>") }<CR>
 
 " do a live grep
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
