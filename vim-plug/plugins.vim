@@ -20,6 +20,9 @@ Plug 'f3fora/cmp-spell'
 Plug 'hrsh7th/cmp-calc'
 Plug 'L3MON4D3/LuaSnip' " Snippets plugin
 
+"neovim lualine
+Plug 'hoob3rt/lualine.nvim'
+
 "telescope plugins
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
@@ -29,9 +32,6 @@ Plug 'nvim-telescope/telescope-fzy-native.nvim'
 "GIT Functionality
 Plug 'lewis6991/gitsigns.nvim'
 
-"neovim powerline plugins
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 
 "I only use this for syntax highliting xD
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  
