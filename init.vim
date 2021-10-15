@@ -14,10 +14,11 @@ luafile $HOME/.config/nvim/lua/lsp/css-ls.lua
 luafile $HOME/.config/nvim/lua/plugs/cmp-config.lua
 luafile $HOME/.config/nvim/lua/plugs/saga-conf.lua
 luafile $HOME/.config/nvim/lua/lsp/clangd-ls.lua
+"luafile $HOME/.config/nvim/lua/lsp/ccls.lua
 luafile $HOME/.config/nvim/lua/lsp/python-ls.lua
 luafile $HOME/.config/nvim/lua/lsp/ts-lsp.lua
 luafile $HOME/.config/nvim/lua/lsp/bash-lsp.lua
-"luafile $HOME/.config/nvim/lua/lsp/arduino-ls.lua
+luafile $HOME/.config/nvim/lua/lsp/arduino-ls.lua
 
 "utilities in lua
 luafile $HOME/.config/nvim/lua/plugs/lualine-conf.lua
@@ -27,12 +28,9 @@ source $HOME/.config/nvim/plug-config/emmet-conf.vim
 
 source $HOME/.config/nvim/plug-config/lspsaga-conf.vim
 
-"augroup lsp
-    "au!
-    "au FileType arduino lua require'arduino_config'.setup()
-"augroup end
 
-augroup lsp
-    au!
-    au FileType java lua require'jdtls_config'.setup()
-augroup end
+
+"augroup lsp
+"    au!
+"    au FileType java lua require'jdtls_config'.setup()
+"augroup end
