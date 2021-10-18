@@ -24,6 +24,7 @@ luafile $HOME/.config/nvim/lua/lsp/arduino-ls.lua
 luafile $HOME/.config/nvim/lua/plugs/lualine-conf.lua
 luafile $HOME/.config/nvim/lua/plugs/icons.lua
 luafile $HOME/.config/nvim/lua/plugs/gitsigns.lua
+"luafile $HOME/.config/nvim/lua/plugs/luasnip.lua
 source $HOME/.config/nvim/plug-config/emmet-conf.vim
 
 source $HOME/.config/nvim/plug-config/lspsaga-conf.vim

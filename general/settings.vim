@@ -3,6 +3,8 @@ nnoremap <SPACE> <Nop>
 let g:mapleader = "\<Space>"
 
 syntax enable
+set encoding=utf8
+set guifont=Hack\ Nerd\ Font\ 11
 set relativenumber
 set nohlsearch
 set nowrap
