@@ -36,8 +36,9 @@ Plug 'lewis6991/gitsigns.nvim'
 "I only use this for syntax highliting xD
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  
 
-" for auto pairs and for easier commenting
+" utilities
 Plug 'mattn/emmet-vim'
+Plug 'glepnir/dashboard-nvim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'preservim/nerdcommenter'
 

@@ -23,6 +23,9 @@ nnoremap <leader>of <cmd>Telescope oldfiles<cr>
 " list all files and directory in current working directory
 nnoremap <leader>fb <cmd>Telescope file_browser<cr>
 
+" Lists vim marks and their value
+nnoremap <leader>fm <cmd>Telescope marks<cr>
+
 " LSP commands
 "nnoremap <leader>gr <cmd>Telescope lsp_references<cr> 
 "nnoremap <leader>gd <cmd>Telescope lsp_defenitions<cr> 

@@ -7,6 +7,7 @@ source $HOME/.config/nvim/plug-config/lsp-config.vim
 luafile $HOME/.config/nvim/lua/plugs/tele-conf.lua
 source $HOME/.config/nvim/plug-config/tele-config.vim
 source $HOME/.config/nvim/themes/themes.vim
+source $HOME/.config/nvim/plug-config/dashboard-nvim.vim
 
 "lsp lua
 luafile $HOME/.config/nvim/lua/lsp/html-ls.lua
