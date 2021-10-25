@@ -19,6 +19,7 @@ luafile $HOME/.config/nvim/lua/lsp/python-ls.lua
 luafile $HOME/.config/nvim/lua/lsp/ts-lsp.lua
 luafile $HOME/.config/nvim/lua/lsp/bash-lsp.lua
 luafile $HOME/.config/nvim/lua/lsp/arduino-ls.lua
+luafile $HOME/.config/nvim/lua/lsp/phpactor-ls.lua
 
 "utilities in lua
 luafile $HOME/.config/nvim/lua/plugs/lualine-conf.lua
