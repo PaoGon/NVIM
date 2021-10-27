@@ -21,6 +21,7 @@ set cursorline
 set colorcolumn=100
 highlight ColorColumn ctermbg=65
 set signcolumn=yes
+highlight CmpItemMenu guifg=#3c3836 guibg=#504945
 
 "set nobackup
 "set undodir=~/.vim/undodir

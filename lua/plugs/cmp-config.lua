@@ -28,6 +28,7 @@ local feedkey = function(key, mode)
 end
 
 
+
 require'lspconfig'.html.setup {
   capabilities = capabilities,
 }
@@ -43,6 +44,9 @@ vim.o.completeopt = 'menuone,noselect'
 -- luasnip setup
 local luasnip = require 'luasnip'
 
+local lspkind = require "lspkind"
+lspkind.init()
+
 -- nvim-cmp setup
 local cmp = require 'cmp'
 cmp.setup {
@@ -51,26 +55,19 @@ cmp.setup {
       },
 
     formatting = {
-      format = function(entry, vim_item)
-        -- fancy icons and a name of kind
-        vim_item.kind = require("lspkind").presets.default[vim_item.kind] .. " " .. vim_item.kind
-
-        -- set a name for each source
-        vim_item.menu = ({
-          buffer = "[Buffer]",
-          nvim_lsp = "[LSP]",
-          luasnip = "[LuaSnip]",
-          nvim_lua = "[Lua]",
-          path = "[Path]",
-          spell = "[Spell]",
-          calc = "[Clac]"
-
-
-        })[entry.source.name]
-        return vim_item
-      end,
+        with_text = true,
+        format = lspkind.cmp_format {
+          menu = {
+              buffer = "[Buffer]",
+              nvim_lsp = "[LSP]",
+              luasnip = "[LuaSnip]",
+              nvim_lua = "[Lua]",
+              latex_symbols = "[Latex]",
+          },
+        },
     },
 
+    
 
   snippet = {
     expand = function(args)
@@ -79,24 +76,10 @@ cmp.setup {
   },
 
   
-  
-
   mapping = {
     ['<DOWN>'] = cmp.mapping.scroll_docs(2),
     ['<UP>'] = cmp.mapping.scroll_docs(-2),
     ['<CR>'] = cmp.mapping.confirm(),
-
-    --["<Tab>"] = cmp.mapping(function(fallback)
-      --if cmp.visible() then
-        --cmp.select_next_item()
-      --elseif luasnip.expand_or_jumpable() then
-        --luasnip.expand_or_jump()
-      --elseif has_words_before() then
-        --cmp.complete()
-      --else
-        --fallback()
-      --end
-    --end, { "i", "s" }),
 
     ["<Tab>"] = cmp.mapping(function(fallback)
         if luasnip.expand_or_jumpable() then
@@ -120,9 +103,22 @@ cmp.setup {
       end
     end, { "i", "s" }),
 
+  },
 
+  experimental = {
+
+      native_menu = false,
+
+      ghost_text = true,
 
   },
+
+  --highlights = {
+      --CmpItemMenu = guifg=#3c3836, guibg=#504945
+  --},
+  --
+  --
+
 
 
   sources = {
@@ -136,3 +132,4 @@ cmp.setup {
   },
 
 }
+

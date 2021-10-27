@@ -41,5 +41,6 @@ Plug 'mattn/emmet-vim'
 Plug 'glepnir/dashboard-nvim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'preservim/nerdcommenter'
+Plug 'tjdevries/colorbuddy.nvim'
 
 call plug#end()
