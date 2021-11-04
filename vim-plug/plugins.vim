@@ -31,6 +31,7 @@ Plug 'nvim-telescope/telescope-fzy-native.nvim'
 
 "GIT Functionality
 Plug 'lewis6991/gitsigns.nvim'
+Plug 'tpope/vim-fugitive'
 
 
 "I only use this for syntax highliting xD
