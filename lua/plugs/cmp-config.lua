@@ -37,6 +37,11 @@ require'lspconfig'.cssls.setup {
   capabilities = capabilities,
 }
 
+local signs = { Error = " ", Warn = " ", Hint = "", Info = " " }
+for type, icon in pairs(signs) do
+  local hl = "DiagnosticSign" .. type
+  vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
+end
 
 -- Set completeopt to have a better completion experience
 vim.o.completeopt = 'menuone,noselect'
@@ -122,14 +127,12 @@ cmp.setup {
 
 
   sources = {
-    { name = 'buffer' },
-    { name = 'nvim_lsp' },
-    { name = 'luasnip' },
+    { name = 'buffer', keyword_length = 5},
+    { name = 'nvim_lsp', keyword_length = 5},
+    { name = 'luasnip', keyword_length = 5},
     { name = 'nvim_lua' },
     {name = 'path'},
     {name = 'spell'},
     {name = 'calc'}
   },
-
 }
-

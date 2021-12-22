@@ -6,6 +6,7 @@ require'lualine'.setup {
     section_separators = {'', ''},
     disabled_filetypes = {}
   },
+
   sections = {
     lualine_a = {'mode'},
     lualine_b = {

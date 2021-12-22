@@ -3,6 +3,7 @@ source $HOME/.config/nvim/general/settings.vim
 source $HOME/.config/nvim/keys/mappings.vim
 source $HOME/.config/nvim/plug-config/treesitter.vim
 source $HOME/.config/nvim/plug-config/lsp-config.vim
+"source $HOME/.config/nvim/plug-config/lspsaga-conf.vim
 
 luafile $HOME/.config/nvim/lua/plugs/tele-conf.lua
 source $HOME/.config/nvim/plug-config/tele-config.vim
@@ -13,7 +14,7 @@ source $HOME/.config/nvim/plug-config/dashboard-nvim.vim
 luafile $HOME/.config/nvim/lua/lsp/html-ls.lua
 luafile $HOME/.config/nvim/lua/lsp/css-ls.lua
 luafile $HOME/.config/nvim/lua/plugs/cmp-config.lua
-luafile $HOME/.config/nvim/lua/plugs/saga-conf.lua
+"luafile $HOME/.config/nvim/lua/plugs/saga-conf.lua
 luafile $HOME/.config/nvim/lua/lsp/clangd-ls.lua
 "luafile $HOME/.config/nvim/lua/lsp/ccls.lua
 luafile $HOME/.config/nvim/lua/lsp/python-ls.lua
@@ -29,7 +30,6 @@ luafile $HOME/.config/nvim/lua/plugs/gitsigns.lua
 "luafile $HOME/.config/nvim/lua/plugs/luasnip.lua
 source $HOME/.config/nvim/plug-config/emmet-conf.vim
 
-source $HOME/.config/nvim/plug-config/lspsaga-conf.vim
 
 
 

@@ -27,6 +27,7 @@ highlight CmpItemMenu guifg=#3c3836 guibg=#504945
 "set undodir=~/.vim/undodir
 "set undofile
 
+let g:python3_host_prog = "/usr/bin/python3.9"
 
 au! BufWritePost $MYVIMRC source %      
 cmap w!! w !sudo tee %

@@ -5,10 +5,12 @@ Plug 'morhetz/gruvbox'
 
 "LSP plugins
 Plug 'neovim/nvim-lspconfig'
-Plug 'glepnir/lspsaga.nvim'
+"Plug 'glepnir/lspsaga.nvim'
 Plug 'ray-x/lsp_signature.nvim'
 Plug 'mfussenegger/nvim-jdtls'
 Plug 'onsails/lspkind-nvim'
+
+"Plug 'HallerPatrick/py_lsp.nvim' "for python virtual env.
 
 Plug 'hrsh7th/nvim-cmp' " Autocompletion plugin
 Plug 'hrsh7th/cmp-nvim-lsp' " LSP source for nvim-cmp
