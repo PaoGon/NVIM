@@ -7,7 +7,6 @@ Plug 'morhetz/gruvbox'
 Plug 'neovim/nvim-lspconfig'
 "Plug 'glepnir/lspsaga.nvim'
 Plug 'ray-x/lsp_signature.nvim'
-Plug 'mfussenegger/nvim-jdtls'
 Plug 'onsails/lspkind-nvim'
 
 "Plug 'HallerPatrick/py_lsp.nvim' "for python virtual env.
@@ -21,6 +20,9 @@ Plug 'hrsh7th/cmp-path'
 Plug 'f3fora/cmp-spell'
 Plug 'hrsh7th/cmp-calc'
 Plug 'L3MON4D3/LuaSnip' " Snippets plugin
+
+" language servers
+Plug 'mfussenegger/nvim-jdtls'
 
 "neovim lualine
 Plug 'hoob3rt/lualine.nvim'
