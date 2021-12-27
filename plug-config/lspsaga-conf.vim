@@ -1,5 +1,6 @@
 " show hover doc
 "nnoremap <silent><leader>K <cmd>lua require('lspsaga.hover').render_hover_doc()<CR>
+"nnoremap <silent>K :Lspsaga hover_doc<CR>
 "
 " scroll down hover doc or scroll in definition preview
 nnoremap <silent><C-f> <cmd>lua require('lspsaga.action').smart_scroll_with_saga(1)<CR>
@@ -40,5 +41,5 @@ nnoremap <silent> <leader>cd :Lspsaga show_line_diagnostics<CR>
 nnoremap <silent><leader>cc <cmd>lua
 
 " jump diagnostic
-nnoremap <silent><C-p> <cmd>lua require'lspsaga.diagnostic'.lsp_jump_diagnostic_prev()<CR>
-nnoremap <silent><C-n> <cmd>lua require'lspsaga.diagnostic'.lsp_jump_diagnostic_next()<CR>
+"nnoremap <silent><C-p> <cmd>lua require'lspsaga.diagnostic'.lsp_jump_diagnostic_prev()<CR>
+"nnoremap <silent><C-n> <cmd>lua require'lspsaga.diagnostic'.lsp_jump_diagnostic_next()<CR>

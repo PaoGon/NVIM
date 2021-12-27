@@ -14,9 +14,9 @@ source $HOME/.config/nvim/plug-config/dashboard-nvim.vim
 luafile $HOME/.config/nvim/lua/lsp/html-ls.lua
 luafile $HOME/.config/nvim/lua/lsp/css-ls.lua
 luafile $HOME/.config/nvim/lua/plugs/cmp-config.lua
-"luafile $HOME/.config/nvim/lua/plugs/saga-conf.lua
-luafile $HOME/.config/nvim/lua/lsp/clangd-ls.lua
+luafile $HOME/.config/nvim/lua/plugs/saga-conf.lua
 "luafile $HOME/.config/nvim/lua/lsp/ccls.lua
+luafile $HOME/.config/nvim/lua/lsp/clangd-ls.lua
 luafile $HOME/.config/nvim/lua/lsp/python-ls.lua
 luafile $HOME/.config/nvim/lua/lsp/ts-lsp.lua
 luafile $HOME/.config/nvim/lua/lsp/bash-lsp.lua
@@ -24,7 +24,9 @@ luafile $HOME/.config/nvim/lua/lsp/arduino-ls.lua
 luafile $HOME/.config/nvim/lua/lsp/phpactor-ls.lua
 luafile $HOME/.config/nvim/lua/lsp/dart-ls.lua
 
+
 "utilities in lua
+luafile $HOME/.config/nvim/lua/plugs/signature-config.lua
 luafile $HOME/.config/nvim/lua/plugs/lualine-conf.lua
 luafile $HOME/.config/nvim/lua/plugs/icons.lua
 luafile $HOME/.config/nvim/lua/plugs/gitsigns.lua

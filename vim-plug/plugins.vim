@@ -2,10 +2,12 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
 "Gruvbox baby
 Plug 'morhetz/gruvbox'
+"Plug 'gruvbox-community/gruvbox'
 
 "LSP plugins
 Plug 'neovim/nvim-lspconfig'
 "Plug 'glepnir/lspsaga.nvim'
+Plug 'tami5/lspsaga.nvim' 
 Plug 'ray-x/lsp_signature.nvim'
 Plug 'onsails/lspkind-nvim'
 
@@ -40,6 +42,7 @@ Plug 'tpope/vim-fugitive'
 
 "I only use this for syntax highliting xD
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  
+Plug 'p00f/nvim-ts-rainbow'
 
 " utilities
 Plug 'mattn/emmet-vim'
