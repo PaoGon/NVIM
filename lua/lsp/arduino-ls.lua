@@ -6,5 +6,6 @@ require'lspconfig'.arduino_language_server.setup({
         "-cli", "/usr/bin/arduino-cli",
         "-clangd", "/usr/bin/clangd"
     },
-    filetypes = {"arduino", "cpp"}
+    --filetypes = {"arduino", "cpp"}
+    filetypes = {"arduino"}
 })

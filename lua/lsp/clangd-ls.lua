@@ -1,3 +1,3 @@
 require'lspconfig'.clangd.setup{
-    filetypes = { "c", "objc", "objcpp" }
+    filetypes = { "c", "cpp", "objc", "objcpp" }
 }
