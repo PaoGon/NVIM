@@ -3,6 +3,7 @@ source $HOME/.config/nvim/general/settings.vim
 source $HOME/.config/nvim/keys/mappings.vim
 source $HOME/.config/nvim/plug-config/treesitter.vim
 source $HOME/.config/nvim/plug-config/lsp-config.vim
+source $HOME/.config/nvim/plug-config/nvim-tree.vim
 "source $HOME/.config/nvim/plug-config/lspsaga-conf.vim
 
 luafile $HOME/.config/nvim/lua/plugs/tele-conf.lua
@@ -26,6 +27,7 @@ luafile $HOME/.config/nvim/lua/lsp/dart-ls.lua
 
 
 "utilities in lua
+luafile $HOME/.config/nvim/lua/plugs/nvim-tree.lua
 luafile $HOME/.config/nvim/lua/plugs/signature-config.lua
 luafile $HOME/.config/nvim/lua/plugs/lualine-conf.lua
 luafile $HOME/.config/nvim/lua/plugs/icons.lua

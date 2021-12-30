@@ -50,5 +50,6 @@ Plug 'glepnir/dashboard-nvim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'preservim/nerdcommenter'
 Plug 'tjdevries/colorbuddy.nvim'
+Plug 'kyazdani42/nvim-tree.lua'
 
 call plug#end()
