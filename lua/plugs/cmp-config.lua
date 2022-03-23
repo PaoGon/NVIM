@@ -1,3 +1,12 @@
+   --██████  ████     ████ ███████                                 ████
+  --██░░░░██░██░██   ██░██░██░░░░██                               ░██░ 
+ --██    ░░ ░██░░██ ██ ░██░██   ░██     █████   ██████  ███████  ██████
+--░██       ░██ ░░███  ░██░███████     ██░░░██ ██░░░░██░░██░░░██░░░██░ 
+--░██       ░██  ░░█   ░██░██░░░░     ░██  ░░ ░██   ░██ ░██  ░██  ░██  
+--░░██    ██░██   ░    ░██░██       ██░██   ██░██   ░██ ░██  ░██  ░██  
+ --░░██████ ░██        ░██░██      ░██░░█████ ░░██████  ███  ░██  ░██  
+  --░░░░░░  ░░         ░░ ░░       ░░  ░░░░░   ░░░░░░  ░░░   ░░   ░░   
+  
 -- Add additional capabilities supported by nvim-cmp
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.documentationFormat = { 'markdown', 'plaintext' }
