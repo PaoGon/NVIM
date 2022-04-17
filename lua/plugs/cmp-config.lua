@@ -1,13 +1,14 @@
    --██████  ████     ████ ███████                                 ████
-  --██░░░░██░██░██   ██░██░██░░░░██                               ░██░ 
+  --██░░░░██░██░██   ██░██░██░░░░██                               ░██░
  --██    ░░ ░██░░██ ██ ░██░██   ░██     █████   ██████  ███████  ██████
---░██       ░██ ░░███  ░██░███████     ██░░░██ ██░░░░██░░██░░░██░░░██░ 
---░██       ░██  ░░█   ░██░██░░░░     ░██  ░░ ░██   ░██ ░██  ░██  ░██  
---░░██    ██░██   ░    ░██░██       ██░██   ██░██   ░██ ░██  ░██  ░██  
- --░░██████ ░██        ░██░██      ░██░░█████ ░░██████  ███  ░██  ░██  
-  --░░░░░░  ░░         ░░ ░░       ░░  ░░░░░   ░░░░░░  ░░░   ░░   ░░   
-  
+--░██       ░██ ░░███  ░██░███████     ██░░░██ ██░░░░██░░██░░░██░░░██░
+--░██       ░██  ░░█   ░██░██░░░░     ░██  ░░ ░██   ░██ ░██  ░██  ░██
+--░░██    ██░██   ░    ░██░██       ██░██   ██░██   ░██ ░██  ░██  ░██
+ --░░██████ ░██        ░██░██      ░██░░█████ ░░██████  ███  ░██  ░██
+  --░░░░░░  ░░         ░░ ░░       ░░  ░░░░░   ░░░░░░  ░░░   ░░   ░░
+
 -- Add additional capabilities supported by nvim-cmp
+--local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.documentationFormat = { 'markdown', 'plaintext' }
 capabilities.textDocument.completion.completionItem.snippetSupport = true
@@ -18,11 +19,19 @@ capabilities.textDocument.completion.completionItem.deprecatedSupport = true
 capabilities.textDocument.completion.completionItem.commitCharactersSupport = true
 capabilities.textDocument.completion.completionItem.tagSupport = { valueSet = { 1 } }
 capabilities.textDocument.completion.completionItem.resolveSupport = {
-  properties = {
-    'documentation',
-    'detail',
-    'additionalTextEdits',
-  },
+    properties = {
+        'documentation',
+        'detail',
+        'additionalTextEdits',
+    },
+}
+
+require'lspconfig'.html.setup {
+  capabilities = capabilities,
+}
+
+require'lspconfig'.cssls.setup {
+  capabilities = capabilities,
 }
 
 local has_words_before = function()
@@ -37,15 +46,6 @@ local feedkey = function(key, mode)
 end
 
 
-
-require'lspconfig'.html.setup {
-  capabilities = capabilities,
-}
-
-require'lspconfig'.cssls.setup {
-  capabilities = capabilities,
-}
-
 local signs = { Error = " ", Warn = " ", Hint = "", Info = " " }
 for type, icon in pairs(signs) do
   local hl = "DiagnosticSign" .. type
@@ -55,7 +55,7 @@ end
 -- Set completeopt to have a better completion experience
 vim.o.completeopt = 'menuone,noselect'
 
--- luasnip setup
+---- luasnip setup
 local luasnip = require 'luasnip'
 
 local lspkind = require "lspkind"
@@ -64,53 +64,51 @@ lspkind.init()
 -- nvim-cmp setup
 local cmp = require 'cmp'
 cmp.setup {
-      completion = {
+
+    completion = {
         completeopt = 'menu,menuone,noinsert',
-      },
+    },
 
     formatting = {
         with_text = true,
         format = lspkind.cmp_format {
-          menu = {
-              buffer = "[Buffer]",
-              nvim_lsp = "[LSP]",
-              luasnip = "[LuaSnip]",
-              nvim_lua = "[Lua]",
-              latex_symbols = "[Latex]",
-          },
+            menu = {
+                buffer = "[Buffer]",
+                nvim_lsp = "[LSP]",
+                luasnip = "[LuaSnip]",
+                nvim_lua = "[Lua]",
+                latex_symbols = "[Latex]",
+            },
         },
     },
 
-    
-
-  snippet = {
-    expand = function(args)
-      require('luasnip').lsp_expand(args.body)
-    end,
-  },
-
-  
-  mapping = {    
-    ["<CR>"] = cmp.mapping.confirm {
-        behavior = cmp.ConfirmBehavior.Insert,
-        select = true,
+    snippet = {
+        expand = function(args)
+            require("luasnip").lsp_expand(args.body)
+        end,
     },
-    ["<Tab>"] = cmp.mapping(function(fallback)
-      if cmp.visible() then
-        cmp.select_next_item()
-      elseif has_words_before() then
-        cmp.complete()
-      else
-        fallback() -- The fallback function sends a already mapped key. In this case, it's probably `<Tab>`.
-      end
-    end, { "i", "s" }),
 
-    ["<S-Tab>"] = cmp.mapping(function()
-      if cmp.visible() then
-        cmp.select_prev_item()
-      end
-    end, { "i", "s" }),
-  },
+    mapping = {
+        ["<CR>"] = cmp.mapping.confirm {
+            behavior = cmp.ConfirmBehavior.Insert,
+            select = true,
+        },
+        ["<Tab>"] = cmp.mapping(function(fallback)
+            if cmp.visible() then
+                cmp.select_next_item()
+            elseif has_words_before() then
+                cmp.complete()
+            else
+                fallback() -- The fallback function sends a already mapped key. In this case, it's probably `<Tab>`.
+            end
+        end, { "i", "s" }),
+
+        ["<S-Tab>"] = cmp.mapping(function()
+            if cmp.visible() then
+                cmp.select_prev_item()
+            end
+        end, { "i", "s" }),
+    },
 
   experimental = {
 
@@ -125,8 +123,6 @@ cmp.setup {
   --},
   --
   --
-
-
 
   sources = {
     { name = 'buffer', keyword_length = 5},
