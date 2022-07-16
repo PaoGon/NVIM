@@ -21,7 +21,8 @@ Plug 'hrsh7th/cmp-nvim-lua'
 Plug 'hrsh7th/cmp-path' 
 Plug 'f3fora/cmp-spell'
 Plug 'hrsh7th/cmp-calc'
-Plug 'L3MON4D3/LuaSnip' " Snippets plugin
+"Plug 'L3MON4D3/LuaSnip' " Snippets plugin
+Plug 'L3MON4D3/Luasnip', { 'branch': 'ls_snippets_preserve' }
 
 " language servers
 Plug 'mfussenegger/nvim-jdtls'
