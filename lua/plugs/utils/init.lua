@@ -1,0 +1,8 @@
+require('plugs/utils/treesitter')
+require('plugs/utils/tele-conf')
+require('plugs/utils/tree-conf')
+require('plugs/utils/lualine-conf')
+require('plugs/utils/emmet')
+require('plugs/utils/dashboard-conf')
+require('plugs/utils/lspsig-conf')
+require('plugs/utils/autopairs-conf')

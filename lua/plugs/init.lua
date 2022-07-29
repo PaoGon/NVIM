@@ -1,0 +1,5 @@
+require 'plugs/lsp'
+require 'plugs/theme'
+require 'plugs/git'
+require 'plugs/utils'
+require 'plugs/snippets'
