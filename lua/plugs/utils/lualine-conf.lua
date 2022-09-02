@@ -1,11 +1,11 @@
- --██       ██     ██     ██      ██ ██                 
---░██      ░██    ░██    ████    ░██░░                  
---░██      ░██    ░██   ██░░██   ░██ ██ ███████   █████ 
+ --██       ██     ██     ██      ██ ██
+--░██      ░██    ░██    ████    ░██░░
+--░██      ░██    ░██   ██░░██   ░██ ██ ███████   █████
 --░██      ░██    ░██  ██  ░░██  ░██░██░░██░░░██ ██░░░██
 --░██      ░██    ░██ ██████████ ░██░██ ░██  ░██░███████
---░██      ░██    ░██░██░░░░░░██ ░██░██ ░██  ░██░██░░░░ 
+--░██      ░██    ░██░██░░░░░░██ ░██░██ ░██  ░██░██░░░░
 --░████████░░███████ ░██     ░██ ███░██ ███  ░██░░██████
---░░░░░░░░  ░░░░░░░  ░░      ░░ ░░░ ░░ ░░░   ░░  ░░░░░░ 
+--░░░░░░░░  ░░░░░░░  ░░      ░░ ░░░ ░░ ░░░   ░░  ░░░░░░
 
 require'lualine'.setup {
   options = {
@@ -21,29 +21,29 @@ require'lualine'.setup {
   sections = {
     lualine_a = {'mode'},
     lualine_b = {
-        'branch', 
+        'branch',
         {
             'diff',
-            colored = true, 
+            colored = true,
             symbols = {
-                added = '+', 
-                modified = '~', 
+                added = '+',
+                modified = '~',
                 removed = '-'
             }
         }
     },
-    lualine_c = {'filename'},
+    lualine_c = {},
     lualine_x = {
-          { 
-            'diagnostics', 
+          {
+            'diagnostics',
 
-            sources = {"nvim_diagnostic"}, 
+            sources = {"nvim_diagnostic"},
             symbols = {
-                error = ' ', 
-                warn = ' ', 
-                info = ' ', 
+                error = ' ',
+                warn = ' ',
+                info = ' ',
                 hint = ' '
-            } 
+            }
       },
           'encoding',
           'fileformat',
@@ -60,6 +60,19 @@ require'lualine'.setup {
     lualine_y = {},
     lualine_z = {}
   },
-  tabline = {},
+  tabline = {
+    lualine_a = {
+      {
+        'tabs',
+        max_length = vim.o.columns / 3, -- Maximum width of tabs component.
+                                        -- Note:
+                                        -- It can also be a function that returns
+                                        -- the value of `max_length` dynamically.
+        mode = 1, -- 0: Shows tab_nr
+                  -- 1: Shows tab_name
+                  -- 2: Shows tab_nr + tab_name
+      }
+    }
+  },
   extensions = {}
 }
