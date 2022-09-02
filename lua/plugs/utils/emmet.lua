@@ -19,5 +19,5 @@ vim.cmd[[let g:user_emmet_settings = {
   \}
 ]]
 
-vim.cmd[[autocmd FileType html,xml,css,php,javascriptreact,javascript EmmetInstall]]
-vim.cmd[[autocmd FileType html,xml,css,php,javascriptreact,javascript imap <buffer><C-c> <plug>(emmet-expand-abbr)]]
+vim.cmd[[autocmd FileType html,xml,markdown,css,php,javascriptreact,javascript,typescript,typescriptreact EmmetInstall]]
+vim.cmd[[autocmd FileType html,xml,markdown,css,php,javascriptreact,javascript,typescript,typescriptreact imap <buffer><C-c> <plug>(emmet-expand-abbr)]]
