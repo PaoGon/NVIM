@@ -9,6 +9,7 @@ db.default_banner = {
 ' ╚═╝  ╚═══╝ ╚══════╝ ╚═════╝    ╚═══╝   ╚═╝ ╚═╝     ╚═╝',
 '',
 }
+
 db.hide_statusline  = false
 db.hide_tabline  = false
 db.custom_center = {
@@ -23,7 +24,7 @@ db.custom_center = {
     action = 'Telescope git_files',
   },
   {
-    icon = '  ',
+    icon = ' ',
     desc = 'find_files',
     action = 'Telescope find_files',
   },
