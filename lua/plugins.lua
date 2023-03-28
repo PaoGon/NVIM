@@ -46,9 +46,9 @@ return require('packer').startup(function(use)
   }
 
   --utilities
-  use{ 'mattn/emmet-vim' }
-  use {'glepnir/dashboard-nvim'}
-  use {"windwp/nvim-autopairs"}
+  use { 'mattn/emmet-vim' }
+
+  use "lukas-reineke/indent-blankline.nvim"
 
   use {
     'kyazdani42/nvim-tree.lua',
