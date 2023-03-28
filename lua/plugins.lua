@@ -6,30 +6,26 @@ return require('packer').startup(function(use)
   use 'morhetz/gruvbox'
 
   --LSP plugins
-  use 'neovim/nvim-lspconfig'       -- Configurations for Nvim LSP
+  use 'neovim/nvim-lspconfig' -- Configurations for Nvim LSP
   use 'onsails/lspkind-nvim'
-  use {
-    'glepnir/lspsaga.nvim',
-    branch = "main"
-  }
 
   --Autocompletion
-  use 'hrsh7th/nvim-cmp'            --Autocompletion plugin
-  use 'hrsh7th/cmp-nvim-lsp'        --LSP source for nvim-cmp
-  use 'hrsh7th/cmp-buffer'          --buffer completion source
-  use 'saadparwaiz1/cmp_luasnip'    --Snippets source for nvim-cmp
+  use 'hrsh7th/nvim-cmp' --Autocompletion plugin
+  use 'hrsh7th/cmp-nvim-lsp' --LSP source for nvim-cmp
+  use 'hrsh7th/cmp-buffer' --buffer completion source
+  use 'saadparwaiz1/cmp_luasnip' --Snippets source for nvim-cmp
   use 'hrsh7th/cmp-nvim-lua'
-  use 'hrsh7th/cmp-path'            --path completion source
-  use 'f3fora/cmp-spell'            --spelling completion source
-  use 'hrsh7th/cmp-calc'            --calculator compeltion source
+  use 'hrsh7th/cmp-path' --path completion source
+  use 'f3fora/cmp-spell' --spelling completion source
+  use 'hrsh7th/cmp-calc' --calculator compeltion source
 
-  use{"L3MON4D3/Luasnip", branch = "ls_snippets_preserve"}  --snippet provider
+  use { "L3MON4D3/Luasnip", branch = "ls_snippets_preserve" } --snippet provider
 
   --telescope
   use 'nvim-lua/plenary.nvim'
   use {
     'nvim-telescope/telescope.nvim', tag = '0.1.0',
-    requires = { {'nvim-lua/plenary.nvim'} }
+    requires = { { 'nvim-lua/plenary.nvim' } }
   }
   use 'kyazdani42/nvim-web-devicons'
   use 'nvim-telescope/telescope-fzy-native.nvim'
@@ -37,8 +33,8 @@ return require('packer').startup(function(use)
 
   --I only use this for syntax highliting xD
   use {
-      'nvim-treesitter/nvim-treesitter',
-      run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
+    'nvim-treesitter/nvim-treesitter',
+    run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
   }
   use 'p00f/nvim-ts-rainbow'
 
@@ -48,7 +44,6 @@ return require('packer').startup(function(use)
     'lewis6991/gitsigns.nvim',
     tag = 'release' -- To use the latest release
   }
-
 
   --utilities
   use{ 'mattn/emmet-vim' }
@@ -66,6 +61,10 @@ return require('packer').startup(function(use)
     'glepnir/dashboard-nvim',
     dependencies = { { 'nvim-tree/nvim-web-devicons' } }
   }
+
+  use { "windwp/nvim-autopairs" }
+
+  use {
     "ray-x/lsp_signature.nvim",
   }
 
@@ -74,7 +73,19 @@ return require('packer').startup(function(use)
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }
   }
 
+  use {
+    'glepnir/lspsaga.nvim',
+    branch = "main",
+    requires = {
+      { "nvim-tree/nvim-web-devicons" },
+      { "nvim-treesitter/nvim-treesitter" }
+    }
+  }
 
+  use {
+    'lewis6991/gitsigns.nvim',
+    tag = 'release' -- To use the latest release
+  }
   -- java language server
   use 'mfussenegger/nvim-jdtls'
 
