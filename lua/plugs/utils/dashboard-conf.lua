@@ -1,42 +1,48 @@
-local db = require('dashboard')
+local db = require("dashboard")
 
-db.default_banner = {
-' ███╗   ██╗ ███████╗ ██████╗  ██╗   ██╗ ██╗ ███╗   ███╗',
-' ████╗  ██║ ██╔════╝██╔═══██╗ ██║   ██║ ██║ ████╗ ████║',
-' ██╔██╗ ██║ █████╗  ██║   ██║ ██║   ██║ ██║ ██╔████╔██║',
-' ██║╚██╗██║ ██╔══╝  ██║   ██║ ╚██╗ ██╔╝ ██║ ██║╚██╔╝██║',
-' ██║ ╚████║ ███████╗╚██████╔╝  ╚████╔╝  ██║ ██║ ╚═╝ ██║',
-' ╚═╝  ╚═══╝ ╚══════╝ ╚═════╝    ╚═══╝   ╚═╝ ╚═╝     ╚═╝',
-'',
-}
-
-db.hide_statusline  = false
-db.hide_tabline  = false
-db.custom_center = {
-  {
-    icon = '  ',
-    desc = 'open last',
-    action ='SessionLoad',
-  },
-  {
-    icon = '  ',
-    desc = 'git_files',
-    action = 'Telescope git_files',
-  },
-  {
-    icon = ' ',
-    desc = 'find_files',
-    action = 'Telescope find_files',
-  },
-  {
-    icon = '  ',
-    desc = 'live grep',
-    action = 'Telescope live_grep',
-  },
-  {
-    icon = '  ',
-    desc = 'new_file',
-    action = 'DashboardNewFile',
-  },
-}
-
+db.setup({
+  theme = 'doom',
+  config = {
+    week_header = {
+      enable = true
+    },
+    footer = {},
+    center = {
+      {
+        icon = '  ',
+        icon_hl = 'Title',
+        desc = 'open last',
+        desc_hl = 'Title',
+        action = 'SessionLoad',
+      },
+      {
+        icon = '  ',
+        icon_hl = 'Title',
+        desc = 'git_files',
+        desc_hl = 'Title',
+        action = 'Telescope git_files',
+      },
+      {
+        icon = ' ',
+        icon_hl = 'Title',
+        desc = ' find_files',
+        desc_hl = 'Title',
+        action = 'Telescope find_files',
+      },
+      {
+        icon = '  ',
+        icon_hl = 'Title',
+        desc = 'live grep',
+        desc_hl = 'Title',
+        action = 'Telescope live_grep',
+      },
+      {
+        icon = '  ',
+        icon_hl = 'Title',
+        desc = 'new_file',
+        desc_hl = 'Title',
+        action = 'DashboardNewFile',
+      }
+    }
+  }
+})
