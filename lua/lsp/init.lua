@@ -1,3 +1,4 @@
+require 'lsp/lsp-conf'
 require 'lsp/servers/clangd-ls'
 require 'lsp/servers/python-ls'
 require 'lsp/servers/lua-ls'

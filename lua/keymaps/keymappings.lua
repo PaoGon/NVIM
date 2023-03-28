@@ -13,6 +13,7 @@ local map = function(mode, lhs, rhs, opts)
 end
 
 --change to normal mode
+--
 map('i', 'jk', '<ESC>', {noremap = true})
 map('i', 'kj', '<ESC>', {noremap = true})
 
@@ -37,6 +38,10 @@ map('i', '{', '{<c-g>u', {noremap = true})
 map('i', '(', '(<c-g>u', {noremap = true})
 map('i', '!', '!<c-g>u', {noremap = true})
 map('i', '?', '?<c-g>u', {noremap = true})
+
+-- creating new line in normal mode
+map('n', '<M-o>', 'o<ESC>', {noremap = true})
+map('n', '<M-O>', 'O<ESC>', {noremap = true})
 
 
 --moving text

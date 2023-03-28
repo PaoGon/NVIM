@@ -7,7 +7,7 @@
 --░███████  ░██     ░██░██   ░░██    ░██          ░████████ ████████
 --░░░░░░░   ░░      ░░ ░░     ░░     ░░           ░░░░░░░░ ░░░░░░░░
 
-local lsp_config = require'lsp.lspconf'
+local lsp_config = require'lsp.lsp-conf'
 
 require'lspconfig'.dartls.setup({
   on_attach = lsp_config.on_attach,

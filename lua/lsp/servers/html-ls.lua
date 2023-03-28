@@ -7,7 +7,7 @@
 --░██     ░██    ░██    ░██        ░██░████████       ███ ██████
 --░░      ░░     ░░     ░░         ░░ ░░░░░░░░       ░░░ ░░░░░░
 
-local lsp_config = require'lsp.lspconf'
+local lsp_config = require'lsp.lsp-conf'
 
 require'lspconfig'.html.setup{
   on_attach = lsp_config.on_attach,

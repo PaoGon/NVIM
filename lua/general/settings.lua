@@ -14,6 +14,7 @@ vim.opt.guifont = 'Hack Nerd Font 11'
 vim.opt.relativenumber = true
 vim.opt.hlsearch = false
 vim.opt.wrap = false
+vim.opt.wm = 10
 vim.opt.nu = true
 vim.opt.softtabstop = 4
 vim.opt.tabstop = 4
@@ -26,5 +27,3 @@ vim.opt.cursorline = true
 vim.opt.signcolumn = 'yes'
 vim.opt.cc = '100'
 vim.cmd([[ highlight ColorColumn ctermbg=65 ]])
-
-

@@ -13,9 +13,9 @@ local on_attach = function(client, bufnr)
 
   -- Mappings.
   -- See `:help vim.lsp.*` for documentation on any of the below functions
-  local bufopts = { noremap=true, silent=true, buffer=bufnr }
+  local bufopts = { noremap = true, silent = true, buffer = bufnr }
   vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, bufopts)
-  vim.keymap.set('n', 'gd', vim.lsp.buf.definition, bufopts)
+  --vim.keymap.set('n', 'gd', vim.lsp.buf.definition, bufopts)
   --vim.keymap.set('n', 'K', vim.lsp.buf.hover, bufopts)
   vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, bufopts)
   --vim.keymap.set('n', '<leader>K', vim.lsp.buf.signature_help, bufopts)
@@ -28,7 +28,7 @@ local on_attach = function(client, bufnr)
   --vim.keymap.set('n', '<Leader>rn', vim.lsp.buf.rename, bufopts)
   --vim.keymap.set('n', '<space>ca', vim.lsp.buf.code_action, bufopts)
   vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)
-  vim.keymap.set('n', '<space>f', vim.lsp.buf.formatting, bufopts)
+  vim.keymap.set('n', '<space>f', vim.lsp.buf.format, bufopts)
 end
 
 local lsp_flags = {
@@ -36,6 +36,6 @@ local lsp_flags = {
   debounce_text_changes = 150,
 }
 
-local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
 
 return { on_attach = on_attach, lsp_flags = lsp_flags, capabilities = capabilities }

@@ -1,1 +1,1 @@
-require('plugs/snippets/luasnip')
+require('plugs/snippets/luasnip-conf')
