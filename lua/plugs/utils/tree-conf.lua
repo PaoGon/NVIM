@@ -32,3 +32,4 @@ require("nvim-tree").setup({
 
 map('n', '<leader>tr', ':NvimTreeToggle<cr>', {noremap = true})
 map('n', '<leader>r', ':NvimTreeRefresh<cr>', {noremap = true})
+map('n', '<leader>tt', ':NvimTreeFocus<cr>', {noremap = true})

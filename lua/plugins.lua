@@ -38,11 +38,12 @@ return require('packer').startup(function(use)
   }
   use 'p00f/nvim-ts-rainbow'
 
+  use 'JoosepAlviste/nvim-ts-context-commentstring'
+
 
   --GIT functionality
   use {
-    'lewis6991/gitsigns.nvim',
-    tag = 'release' -- To use the latest release
+    'tpope/vim-fugitive'
   }
 
   --utilities
@@ -86,6 +87,13 @@ return require('packer').startup(function(use)
     'lewis6991/gitsigns.nvim',
     tag = 'release' -- To use the latest release
   }
+
+
+  -- for comments
+  use {
+    'numToStr/Comment.nvim'
+  }
+
   -- java language server
   use 'mfussenegger/nvim-jdtls'
 
